@@ -65,15 +65,11 @@ class Lattice {
   }
 
   /**
-   * put functions here
+   * Recreates this.sites (lattice points) based on current parameters.
+   * Called when lattice constant changes or crystal rotates.
    * @public
    */
-
   updateSites() {
-    /**
-     * recreates this.sites (lattice points) based on current parameters
-     * @public - Called when lattice constant changes or crystal rotates.
-     */
 
     // should set above or in initialization file. Perhaps better to confine it to a shape.
     const aLattice = this.latticeConstantsProperty.get().x;
