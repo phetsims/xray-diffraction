@@ -7,13 +7,12 @@
     "url": "https://github.com/phetsims/xray-diffraction.git"
   },
   "devDependencies": {
-    "grunt": "~1.0.0"
+    "grunt": "~1.1.0"
   },
   "phet": {
     "requirejsNamespace": "XRAY_DIFFRACTION",
     "simulation": true,
     "runnable": true,
-    "readmeCreatedManually": true,
     "supportedBrands": [
       "phet",
       "adapted-from-phet"
