@@ -18,7 +18,7 @@ import NumberControl from '../../../../scenery-phet/js/NumberControl.js';
 import Panel from '../../../../sun/js/Panel.js';
 import Path from '../../../../scenery/js/nodes/Path.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
-import RadioButtonGroup from '../../../../sun/js/buttons/RadioButtonGroup.js';
+import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
 import Range from '../../../../dot/js/Range.js';
 import Shape from '../../../../kite/js/Shape.js';
 import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
@@ -170,7 +170,7 @@ class XrayControlPanel extends VBox {
       }
     ];
 
-    const wavefrontRadioGroup = new RadioButtonGroup( model.wavefrontProperty, wavefrontRadioContent, {
+    const wavefrontRadioButtonGroup = new RectangularRadioButtonGroup( model.wavefrontProperty, wavefrontRadioContent, {
       orientation: 'horizontal',
       cornerRadius: 5,
       baseColor: 'white',
@@ -189,7 +189,7 @@ class XrayControlPanel extends VBox {
     const waveFrontMarkersTitle = new Text( wavefrontsMarkersString, TEXT_OPTIONS );
     const waveFrontGroup = new VBox( {
       align: 'left',
-      children: [ waveFrontMarkersTitle, wavefrontRadioGroup ],
+      children: [ waveFrontMarkersTitle, wavefrontRadioButtonGroup ],
       spacing: ELEMENT_SPACING
     } );
 
