@@ -174,7 +174,6 @@ class XrayControlPanel extends VBox {
       orientation: 'horizontal',
       cornerRadius: 5,
       baseColor: 'white',
-      disabledBaseColor: 'white',
       selectedLineWidth: 1,
       selectedStroke: 'black',
       deselectedLineWidth: 0,
