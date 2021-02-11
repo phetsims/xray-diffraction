@@ -6,12 +6,12 @@
 
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
-import TinyEmitter from '../../../../axon/js/TinyEmitter.js';
 import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import Property from '../../../../axon/js/Property.js';
+import TinyEmitter from '../../../../axon/js/TinyEmitter.js';
+import Utils from '../../../../dot/js/Utils.js';
 import Vector3 from '../../../../dot/js/Vector3.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import Utils from '../../../../dot/js/Utils.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
 import Lattice from './Lattice.js';
 
@@ -27,7 +27,7 @@ class XrayDiffractionModel {
     assert && assert( tandem instanceof Tandem, 'invalid tandem' );
 
     // @protected - used to signal when a sim step has occurred
-    this.stepEmitter = new TinyEmitter( { parameters: [ { valueType: 'number' } ] } );
+    this.stepEmitter = new TinyEmitter();
 
     // @private - these are the parameters set by the simulation's control panel
     // Default initial values are sometimes arbitrary, but chosen as noted below
