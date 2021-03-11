@@ -92,7 +92,7 @@ class XrayDiffractionScreenView extends ScreenView {
           // when the Step button is pressed
           listener: () => {
             // .04 s - about 2 timesteps seems about right
-            model.manualStep( .04 );
+            model.manualStep( 0.04 );
             this.drawLight( model, this.crystalNode );
           }
         }
