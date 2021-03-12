@@ -47,7 +47,7 @@ class CrystalNode extends Node {
     let xMax = 0;
     let yMax = 0;
 
-    sites.forEach( function( site ) {
+    sites.forEach( site => {
       const atom = new Circle( RADIUS, {
         x: SCALE_FACTOR * site.x, y: SCALE_FACTOR * site.y,
         fill: new RadialGradient( 2, -3, 2, 2, -3, 7 ) // fill pattern to make the atoms look pretty
