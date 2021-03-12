@@ -35,7 +35,7 @@ class LightPathNode extends Node {
       waveFrontWidth: 0, // 0 for no wavefronts
       // if waveFrontWidth !=0, this gives a pattern of wavefront colors/shades. 60*i gives 6 different colors
       // can also use () => 'black' for black wavefronts, etc.
-      waveFrontPattern: i => 'hsl(' + ( ( 60 * i % 360 ) + 360 ) % 360 + ', 100%, 50%)',
+      waveFrontPattern: i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)`,
       stroke: 'black', // color of sine wave
       centerStroke: 'gray', // color of dashed baseline
       lineWidth: 2,  // width of sine wave, double width of center line

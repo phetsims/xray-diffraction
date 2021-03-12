@@ -161,12 +161,12 @@ class XrayControlPanel extends VBox {
         node: createLines( () => 'black' )
       },
       {
-        value: i => 'hsl(0, 0%, ' + ( 40 * ( ( ( i % 3 ) + 3 ) % 3 ) ) + '%)',
-        node: createLines( i => 'hsl(0, 0%, ' + ( 40 * ( ( ( i % 3 ) + 3 ) % 3 ) ) + '%)' ) // three levels, 0,40,80
+        value: i => `hsl(0, 0%, ${40 * ( ( ( i % 3 ) + 3 ) % 3 )}%)`,
+        node: createLines( i => `hsl(0, 0%, ${40 * ( ( ( i % 3 ) + 3 ) % 3 )}%)` ) // three levels, 0,40,80
       },
       {
-        value: i => 'hsl(' + ( ( 60 * i % 360 ) + 360 ) % 360 + ', 100%, 50%)',
-        node: createLines( i => 'hsl(' + ( ( 60 * i % 360 ) + 360 ) % 360 + ', 100%, 50%)' ) // 60*i gives 6 different colors ),
+        value: i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)`,
+        node: createLines( i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)` ) // 60*i gives 6 different colors ),
       }
     ];
 
