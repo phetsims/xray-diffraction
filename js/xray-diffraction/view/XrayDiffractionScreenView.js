@@ -202,7 +202,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // Note when we need to redraw PLD region
     // listener created once and needed for life of simulation. No need to dispose.
-    model.pLDWavelengthsProperty.changedEmitter.addListener( () => {this.pLDChanged = true;} );
+    model.pLDWavelengthsProperty.lazyLink( () => {this.pLDChanged = true;} );
 
     // show/hide the PLD node when the checkbox linked to pathDifferenceProperty is checked.
     // listener created once and needed for life of simulation. No need to dispose.
@@ -212,7 +212,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // displays message when path length difference (PLD) is integral multiple of the wavelength
     // listener created once and needed for life of simulation. No need to dispose.
-    model.inPhaseProperty.changedEmitter.addListener( () => {
+    model.inPhaseProperty.lazyLink( () => {
       if ( model.inPhaseProperty.value ) {
 
         // reorient text and make it visible
