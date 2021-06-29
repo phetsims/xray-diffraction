@@ -47,11 +47,14 @@ class LightPathNode extends Node {
     const theta = endPoint.minus( startPoint ).getAngle(); // direction of the light path
     const wnK = 2 * Math.PI / wavelength;
 
-    if ( segments < 2 ) {return new Node();} // must have at least 2 points to draw anything. Otherwise just return empty node.
-
     //----------------------------------------------------------------------------------------
 
     super();
+
+    // must have at least 2 points to draw anything. Otherwise just return empty node.
+    if ( segments < 2 ) {
+      return;
+    }
     let rayShape = new Shape();
     const waveShape = new Shape();
     const cosTheta = Math.cos( theta );
