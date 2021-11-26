@@ -17,12 +17,12 @@ import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.j
 import MeasuringTapeNode from '../../../../scenery-phet/js/MeasuringTapeNode.js';
 import ProtractorNode from '../../../../scenery-phet/js/ProtractorNode.js';
 import TimeControlNode from '../../../../scenery-phet/js/TimeControlNode.js';
-import DragListener from '../../../../scenery/js/listeners/DragListener.js';
-import Node from '../../../../scenery/js/nodes/Node.js';
-import Path from '../../../../scenery/js/nodes/Path.js';
-import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
-import RichText from '../../../../scenery/js/nodes/RichText.js';
-import VBox from '../../../../scenery/js/nodes/VBox.js';
+import { DragListener } from '../../../../scenery/js/imports.js';
+import { Node } from '../../../../scenery/js/imports.js';
+import { Path } from '../../../../scenery/js/imports.js';
+import { Rectangle } from '../../../../scenery/js/imports.js';
+import { RichText } from '../../../../scenery/js/imports.js';
+import { VBox } from '../../../../scenery/js/imports.js';
 import Panel from '../../../../sun/js/Panel.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
