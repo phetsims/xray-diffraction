@@ -20,7 +20,7 @@ import { Path } from '../../../../scenery/js/imports.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
 import Range from '../../../../dot/js/Range.js';
-import Shape from '../../../../kite/js/Shape.js';
+import { Shape } from '../../../../kite/js/imports.js';
 import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
 import { Text } from '../../../../scenery/js/imports.js';
 import Utils from '../../../../dot/js/Utils.js';
