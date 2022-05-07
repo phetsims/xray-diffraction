@@ -9,27 +9,27 @@ import xrayDiffraction from './xrayDiffraction.js';
 
 type StringsType = {
   'xray-diffraction': {
-    'title': string
-  },
-  'angleUnit': string,
-  'aLatticeConstant': string,
-  'bLatticeConstant': string,
-  'aLatticeEquals': string,
-  'bdLatticeEquals': string,
-  'braggEquation': string,
-  'dSinTheta': string,
-  'horizontalRays': string,
-  'incidentAngle': string,
-  'inPhase': string,
-  'interplaneDistance': string,
-  'lengthUnit': string,
-  'moreParameters': string,
-  'pathDifference': string,
-  'pLD': string,
-  'showTransmitted': string,
-  'verticalRays': string,
-  'wavelength': string,
-  'waveFrontMarkers': string
+    'title': string;
+  };
+  'angleUnit': string;
+  'aLatticeConstant': string;
+  'bLatticeConstant': string;
+  'aLatticeEquals': string;
+  'bdLatticeEquals': string;
+  'braggEquation': string;
+  'dSinTheta': string;
+  'horizontalRays': string;
+  'incidentAngle': string;
+  'inPhase': string;
+  'interplaneDistance': string;
+  'lengthUnit': string;
+  'moreParameters': string;
+  'pathDifference': string;
+  'pLD': string;
+  'showTransmitted': string;
+  'verticalRays': string;
+  'wavelength': string;
+  'waveFrontMarkers': string;
 };
 
 const xrayDiffractionStrings = getStringModule( 'XRAY_DIFFRACTION' ) as StringsType;
