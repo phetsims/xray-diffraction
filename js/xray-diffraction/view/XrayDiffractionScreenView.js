@@ -6,6 +6,7 @@
 
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import Property from '../../../../axon/js/Property.js';
+import Multilink from '../../../../axon/js/Multilink.js';
 import Utils from '../../../../dot/js/Utils.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
 import Vector2Property from '../../../../dot/js/Vector2Property.js';
@@ -245,7 +246,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // update display when incident angle, wavelength, ray grid, or path difference checkbox changes
     // This link exists for the entire duration of the sim. No need to dispose.
-    Property.multilink( [
+    Multilink.multilink( [
       model.sourceAngleProperty,
       model.sourceWavelengthProperty,
       model.horizontalRaysProperty,
@@ -257,7 +258,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // update crystal when lattice parameters change
     // This link exists for the entire duration of the sim. No need to dispose.
-    Property.multilink( [
+    Multilink.multilink( [
       model.lattice.aConstantProperty,
       model.lattice.cConstantProperty
     ], () => {
