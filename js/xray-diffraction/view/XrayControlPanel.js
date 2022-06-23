@@ -180,10 +180,8 @@ class XrayControlPanel extends VBox {
       deselectedContentOpacity: 1
     } );
 
-    const pathDifferenceCheckbox = new Checkbox( new Text( pathDifferenceString, TEXT_OPTIONS ),
-      model.pathDifferenceProperty, { boxWidth: 15 } );
-    const showTransmittedCheckbox = new Checkbox( new Text( showTransmittedString, TEXT_OPTIONS ),
-      model.showTransmittedProperty, { boxWidth: 15 } );
+    const pathDifferenceCheckbox = new Checkbox( model.pathDifferenceProperty, new Text( pathDifferenceString, TEXT_OPTIONS ), { boxWidth: 15 } );
+    const showTransmittedCheckbox = new Checkbox( model.showTransmittedProperty, new Text( showTransmittedString, TEXT_OPTIONS ), { boxWidth: 15 } );
 
     const waveFrontMarkersTitle = new Text( wavefrontsMarkersString, TEXT_OPTIONS );
     const waveFrontGroup = new VBox( {
