@@ -5,8 +5,8 @@
  */
 
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
-import Property from '../../../../axon/js/Property.js';
 import Multilink from '../../../../axon/js/Multilink.js';
+import Property from '../../../../axon/js/Property.js';
 import Utils from '../../../../dot/js/Utils.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
 import Vector2Property from '../../../../dot/js/Vector2Property.js';
@@ -16,16 +16,11 @@ import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
 import ArrowNode from '../../../../scenery-phet/js/ArrowNode.js';
 import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
 import MeasuringTapeNode from '../../../../scenery-phet/js/MeasuringTapeNode.js';
+import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import ProtractorNode from '../../../../scenery-phet/js/ProtractorNode.js';
 import TimeControlNode from '../../../../scenery-phet/js/TimeControlNode.js';
-import { DragListener } from '../../../../scenery/js/imports.js';
-import { Node } from '../../../../scenery/js/imports.js';
-import { Path } from '../../../../scenery/js/imports.js';
-import { Rectangle } from '../../../../scenery/js/imports.js';
-import { RichText } from '../../../../scenery/js/imports.js';
-import { VBox } from '../../../../scenery/js/imports.js';
+import { DragListener, Node, Path, Rectangle, RichText, VBox } from '../../../../scenery/js/imports.js';
 import Panel from '../../../../sun/js/Panel.js';
-import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
@@ -148,7 +143,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // add tape measure
     const measuringTapeProperty = new Property( { name: 'Å', multiplier: 1 / SCALE_FACTOR } );
-    const measuringTapeNode = new MeasuringTapeNode( measuringTapeProperty, new BooleanProperty( true ), {
+    const measuringTapeNode = new MeasuringTapeNode( measuringTapeProperty, {
       // translucent white background, same value as in Projectile Motion, see https://github.com/phetsims/projectile-motion/issues/156
       textBackgroundColor: 'rgba(255,255,255,0.6)',
       textColor: 'black',
@@ -164,10 +159,10 @@ class XrayDiffractionScreenView extends ScreenView {
       }
     } );
 
-    measuringTapeNode.setTextVisible( false );
-    const measuringTapeIcon = measuringTapeNode.rasterized( { wrap: true } ).mutate( { scale: 0.65 } );
+    const measuringTapeIcon = MeasuringTapeNode.createIcon( { scale: 0.65 } );
+
+    //TODO this should be passed to new MeasuringTapeNode as visibleProperty option value
     const isMeasuringTapeInPlayAreaProperty = new BooleanProperty( false );
-    measuringTapeNode.setTextVisible( true );
     measuringTapeNode.visible = false;
 
     initializeIcon( measuringTapeIcon, isMeasuringTapeInPlayAreaProperty, event => {
