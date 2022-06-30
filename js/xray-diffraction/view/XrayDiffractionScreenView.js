@@ -104,11 +104,13 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // create the protractor node
     const showProtractorProperty = new BooleanProperty( false );
-    const protractorNode = new ProtractorNode( showProtractorProperty, {
+    const protractorNode = new ProtractorNode( {
+      visibleProperty: showProtractorProperty,
       rotatable: true,
+      angle: Math.PI / 2,
       scale: 0.8
     } );
-    protractorNode.protractorAngleProperty.value = Math.PI / 2;
+
     const protractorPositionProperty = new Vector2Property( protractorNode.center );
     // This link exists for the entire duration of the sim. No need to dispose.
     showProtractorProperty.linkAttribute( protractorNode, 'visible' );
@@ -297,7 +299,7 @@ class XrayDiffractionScreenView extends ScreenView {
         this.crystalNodeContainer.addChild( this.crystalNode );
         this.drawLight( model, this.crystalNode );
         showProtractorProperty.reset();
-        protractorNode.protractorAngleProperty.value = Math.PI / 2;
+        protractorNode.reset();
         isMeasuringTapeInPlayAreaProperty.value = false;
         measuringTapeNode.visible = false;
         measuringTapeNode.reset();
