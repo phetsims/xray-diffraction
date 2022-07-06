@@ -172,12 +172,14 @@ class XrayControlPanel extends VBox {
 
     const wavefrontRadioButtonGroup = new RectangularRadioButtonGroup( model.wavefrontProperty, wavefrontRadioContent, {
       orientation: 'horizontal',
-      cornerRadius: 5,
-      baseColor: 'white',
-      selectedLineWidth: 1,
-      selectedStroke: 'black',
-      deselectedLineWidth: 0,
-      deselectedContentOpacity: 1
+      radioButtonOptions: {
+        cornerRadius: 5,
+        baseColor: 'white',
+        selectedLineWidth: 1,
+        selectedStroke: 'black',
+        deselectedLineWidth: 0,
+        deselectedContentOpacity: 1
+      }
     } );
 
     const pathDifferenceCheckbox = new Checkbox( model.pathDifferenceProperty, new Text( pathDifferenceString, TEXT_OPTIONS ), { boxWidth: 15 } );
