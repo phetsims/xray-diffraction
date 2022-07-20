@@ -6,13 +6,12 @@
  * @author Todd Holden (https://tholden79.wixsite.com/mysite2)
  */
 
-// modules
-import merge from '../../../../phet-core/js/merge.js';
-import { Node } from '../../../../scenery/js/imports.js';
-import { Path } from '../../../../scenery/js/imports.js';
-import { Shape } from '../../../../kite/js/imports.js';
 import Utils from '../../../../dot/js/Utils.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
+import { Shape } from '../../../../kite/js/imports.js';
+// modules
+import merge from '../../../../phet-core/js/merge.js';
+import { Node, Path } from '../../../../scenery/js/imports.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
 
 // constants

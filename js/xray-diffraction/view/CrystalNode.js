@@ -8,11 +8,7 @@
 
 // modules
 import ArrowNode from '../../../../scenery-phet/js/ArrowNode.js';
-import { Circle } from '../../../../scenery/js/imports.js';
-import { Node } from '../../../../scenery/js/imports.js';
-import { RichText } from '../../../../scenery/js/imports.js';
-import { RadialGradient } from '../../../../scenery/js/imports.js';
-import { Rectangle } from '../../../../scenery/js/imports.js';
+import { Circle, Node, RadialGradient, Rectangle, RichText } from '../../../../scenery/js/imports.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
 import xrayDiffractionStrings from '../../xrayDiffractionStrings.js';

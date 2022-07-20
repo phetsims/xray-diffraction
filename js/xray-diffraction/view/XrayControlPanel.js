@@ -6,25 +6,21 @@
  * @author Todd Holden (https://tholden79.wixsite.com/mysite2)
  */
 
+import Dimension2 from '../../../../dot/js/Dimension2.js';
+import Range from '../../../../dot/js/Range.js';
+import Utils from '../../../../dot/js/Utils.js';
+import { Shape } from '../../../../kite/js/imports.js';
+import merge from '../../../../phet-core/js/merge.js';
+import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
+import NumberControl from '../../../../scenery-phet/js/NumberControl.js';
+import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
+import { HBox, Node, Path, Text, VBox } from '../../../../scenery/js/imports.js';
 // modules
 import AccordionBox from '../../../../sun/js/AccordionBox.js';
-import Checkbox from '../../../../sun/js/Checkbox.js';
-import Dimension2 from '../../../../dot/js/Dimension2.js';
-import { HBox } from '../../../../scenery/js/imports.js';
-import HSeparator from '../../../../sun/js/HSeparator.js';
-import merge from '../../../../phet-core/js/merge.js';
-import { Node } from '../../../../scenery/js/imports.js';
-import NumberControl from '../../../../scenery-phet/js/NumberControl.js';
-import Panel from '../../../../sun/js/Panel.js';
-import { Path } from '../../../../scenery/js/imports.js';
-import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
 import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
-import Range from '../../../../dot/js/Range.js';
-import { Shape } from '../../../../kite/js/imports.js';
-import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
-import { Text } from '../../../../scenery/js/imports.js';
-import Utils from '../../../../dot/js/Utils.js';
-import { VBox } from '../../../../scenery/js/imports.js';
+import Checkbox from '../../../../sun/js/Checkbox.js';
+import HSeparator from '../../../../sun/js/HSeparator.js';
+import Panel from '../../../../sun/js/Panel.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
 import xrayDiffractionStrings from '../../xrayDiffractionStrings.js';
