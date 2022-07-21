@@ -1,4 +1,4 @@
-// Copyright 2020-2021, University of Colorado Boulder
+// Copyright 2020-2022, University of Colorado Boulder
 
 /**
  * View for the Crystal lattice, displays a 2D array of atomic nuclei to represent the crystal.
