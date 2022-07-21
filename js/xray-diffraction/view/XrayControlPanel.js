@@ -171,10 +171,12 @@ class XrayControlPanel extends VBox {
       radioButtonOptions: {
         cornerRadius: 5,
         baseColor: 'white',
-        selectedLineWidth: 1,
-        selectedStroke: 'black',
-        deselectedLineWidth: 0,
-        deselectedContentOpacity: 1
+        buttonAppearanceStrategyOptions: {
+          selectedLineWidth: 1,
+          selectedStroke: 'black',
+          deselectedLineWidth: 0,
+          deselectedContentOpacity: 1
+        }
       }
     } );
 
