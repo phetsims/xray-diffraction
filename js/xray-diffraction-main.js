@@ -12,7 +12,7 @@ import Tandem from '../../tandem/js/Tandem.js';
 import XrayDiffractionScreen from './xray-diffraction/XrayDiffractionScreen.js';
 import xrayDiffractionStrings from './xrayDiffractionStrings.js';
 
-const xrayDiffractionTitleString = xrayDiffractionStrings[ 'xray-diffraction' ].title;
+const xrayDiffractionTitleStringProperty = xrayDiffractionStrings[ 'xray-diffraction' ].titleStringProperty;
 
 const simOptions = {
   credits: {
@@ -30,7 +30,7 @@ const simOptions = {
 // launch the sim - beware that scenery Image nodes created outside of simLauncher.launch() will have zero bounds
 // until the images are fully loaded, see https://github.com/phetsims/coulombs-law/issues/70
 simLauncher.launch( () => {
-  const sim = new Sim( xrayDiffractionTitleString, [
+  const sim = new Sim( xrayDiffractionTitleStringProperty, [
     new XrayDiffractionScreen( Tandem.ROOT.createTandem( 'xrayDiffractionScreen' ) )
   ], simOptions );
   sim.start();
