@@ -10,9 +10,9 @@ import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import XrayDiffractionScreen from './xray-diffraction/XrayDiffractionScreen.js';
-import xrayDiffractionStrings from './xrayDiffractionStrings.js';
+import XrayDiffractionStrings from './XrayDiffractionStrings.js';
 
-const xrayDiffractionTitleStringProperty = xrayDiffractionStrings[ 'xray-diffraction' ].titleStringProperty;
+const xrayDiffractionTitleStringProperty = XrayDiffractionStrings[ 'xray-diffraction' ].titleStringProperty;
 
 const simOptions = {
   credits: {

@@ -53,8 +53,8 @@ type StringsType = {
   'waveFrontMarkersStringProperty': TReadOnlyProperty<string>;
 };
 
-const xrayDiffractionStrings = getStringModule( 'XRAY_DIFFRACTION' ) as StringsType;
+const XrayDiffractionStrings = getStringModule( 'XRAY_DIFFRACTION' ) as StringsType;
 
-xrayDiffraction.register( 'xrayDiffractionStrings', xrayDiffractionStrings );
+xrayDiffraction.register( 'XrayDiffractionStrings', XrayDiffractionStrings );
 
-export default xrayDiffractionStrings;
+export default XrayDiffractionStrings;

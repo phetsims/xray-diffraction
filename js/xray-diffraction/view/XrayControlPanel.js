@@ -23,21 +23,21 @@ import HSeparator from '../../../../sun/js/HSeparator.js';
 import Panel from '../../../../sun/js/Panel.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
-import xrayDiffractionStrings from '../../xrayDiffractionStrings.js';
+import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 
 // strings
-const angleUnitString = xrayDiffractionStrings.angleUnit;
-const aLatticeEqualsString = xrayDiffractionStrings.aLatticeEquals;
-const bdLatticeEqualsString = xrayDiffractionStrings.bdLatticeEquals;
-const horizontalRaysString = xrayDiffractionStrings.horizontalRays;
-const incidentAngleString = xrayDiffractionStrings.incidentAngle;
-const lengthUnitString = xrayDiffractionStrings.lengthUnit;
-const moreParametersString = xrayDiffractionStrings.moreParameters;
-const pathDifferenceString = xrayDiffractionStrings.pathDifference;
-const showTransmittedString = xrayDiffractionStrings.showTransmitted;
-const verticalRaysString = xrayDiffractionStrings.verticalRays;
-const wavefrontsMarkersString = xrayDiffractionStrings.waveFrontMarkers;
-const wavelengthString = xrayDiffractionStrings.wavelength;
+const angleUnitString = XrayDiffractionStrings.angleUnit;
+const aLatticeEqualsString = XrayDiffractionStrings.aLatticeEquals;
+const bdLatticeEqualsString = XrayDiffractionStrings.bdLatticeEquals;
+const horizontalRaysString = XrayDiffractionStrings.horizontalRays;
+const incidentAngleString = XrayDiffractionStrings.incidentAngle;
+const lengthUnitString = XrayDiffractionStrings.lengthUnit;
+const moreParametersString = XrayDiffractionStrings.moreParameters;
+const pathDifferenceString = XrayDiffractionStrings.pathDifference;
+const showTransmittedString = XrayDiffractionStrings.showTransmitted;
+const verticalRaysString = XrayDiffractionStrings.verticalRays;
+const wavefrontsMarkersString = XrayDiffractionStrings.waveFrontMarkers;
+const wavelengthString = XrayDiffractionStrings.wavelength;
 
 const TEXT_OPTIONS = { font: new PhetFont( { family: 'Verdana', size: 14 } ), maxWidth: 200, align: 'center', setBoundsMethod: 'accurate' };
 const SLIDER_OPTIONS = { trackSize: new Dimension2( 90, 1 ), thumbSize: new Dimension2( 13, 22 ) };
@@ -106,7 +106,7 @@ class XrayControlPanel extends VBox {
     model.lattice.cConstantProperty.link( constant => {
       bLatticeTitle.text = StringUtils.fillIn( bdLatticeEqualsString, {
         value: constant,
-        unit: xrayDiffractionStrings.lengthUnit
+        unit: XrayDiffractionStrings.lengthUnit
       } );
     } );
 
@@ -115,7 +115,7 @@ class XrayControlPanel extends VBox {
     model.lattice.aConstantProperty.link( constant => {
       aLatticeTitle.text = StringUtils.fillIn( aLatticeEqualsString, {
         value: constant,
-        unit: xrayDiffractionStrings.lengthUnit
+        unit: XrayDiffractionStrings.lengthUnit
       } );
     } );
     const aLatticeControl = new NumberControl( aLatticeTitle.text, model.lattice.aConstantProperty, new Range( 2, 20 ),
@@ -127,7 +127,7 @@ class XrayControlPanel extends VBox {
     model.lattice.aConstantProperty.link( constant => {
       aLatticeTitle.text = StringUtils.fillIn( aLatticeEqualsString, {
         value: constant,
-        unit: xrayDiffractionStrings.lengthUnit
+        unit: XrayDiffractionStrings.lengthUnit
       } );
     } );
 

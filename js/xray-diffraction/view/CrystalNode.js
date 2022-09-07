@@ -11,12 +11,12 @@ import ArrowNode from '../../../../scenery-phet/js/ArrowNode.js';
 import { Circle, Node, RadialGradient, Rectangle, RichText } from '../../../../scenery/js/imports.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
-import xrayDiffractionStrings from '../../xrayDiffractionStrings.js';
+import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 
 // strings
-const aLatticeConstantString = xrayDiffractionStrings.aLatticeConstant;
-const bLatticeConstantString = xrayDiffractionStrings.bLatticeConstant;
-const interplaneDistanceString = xrayDiffractionStrings.interplaneDistance;
+const aLatticeConstantString = XrayDiffractionStrings.aLatticeConstant;
+const bLatticeConstantString = XrayDiffractionStrings.bLatticeConstant;
+const interplaneDistanceString = XrayDiffractionStrings.interplaneDistance;
 
 // constants
 const RADIUS = 5;   // Atomic Nucleus Radius. Arbitrarily set to look good

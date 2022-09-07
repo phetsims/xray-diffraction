@@ -24,22 +24,22 @@ import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
-import xrayDiffractionStrings from '../../xrayDiffractionStrings.js';
+import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 import XrayDiffractionModel from '../model/XrayDiffractionModel.js';
 import CrystalNode from './CrystalNode.js';
 import LightPathNode from './LightPathNode.js';
 import XrayControlPanel from './XrayControlPanel.js';
 
 // strings
-const dSinThetaString = xrayDiffractionStrings.dSinTheta;
-const inPhaseString = xrayDiffractionStrings.inPhase;
+const dSinThetaString = XrayDiffractionStrings.dSinTheta;
+const inPhaseString = XrayDiffractionStrings.inPhase;
 
 const DIMENSION_ARROW_OPTIONS = { fill: 'black', stroke: null, tailWidth: 2, headWidth: 7, headHeight: 20, doubleHead: true };
 const AMP = 10;
-const braggEquationString = xrayDiffractionStrings.braggEquation;
-const interplaneDistanceString = xrayDiffractionStrings.interplaneDistance;
-const lengthUnitString = xrayDiffractionStrings.lengthUnit;
-const pLDString = xrayDiffractionStrings.pLD;
+const braggEquationString = XrayDiffractionStrings.braggEquation;
+const interplaneDistanceString = XrayDiffractionStrings.interplaneDistance;
+const lengthUnitString = XrayDiffractionStrings.lengthUnit;
+const pLDString = XrayDiffractionStrings.pLD;
 const SCALE_FACTOR = XrayDiffractionConstants.SCALE_FACTOR;
 const TEXT_OPTIONS = { font: new PhetFont( { family: 'Verdana', size: 14 } ), maxWidth: 200, align: 'center', setBoundsMethod: 'accurate' };
 const TOP_RAY_LENGTH = 400; // Arbitrary length of top incident ray to start it near the top left
