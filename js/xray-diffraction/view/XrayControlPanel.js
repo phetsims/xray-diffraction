@@ -19,7 +19,7 @@ import { HBox, Node, Path, Text, VBox } from '../../../../scenery/js/imports.js'
 import AccordionBox from '../../../../sun/js/AccordionBox.js';
 import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
 import Checkbox from '../../../../sun/js/Checkbox.js';
-import HSeparator from '../../../../sun/js/HSeparator.js';
+import HSeparatorDeprecated from '../../../../sun/js/HSeparatorDeprecated.js';
 import Panel from '../../../../sun/js/Panel.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
@@ -190,7 +190,7 @@ class XrayControlPanel extends VBox {
       spacing: ELEMENT_SPACING
     } );
 
-    const separator = new HSeparator( _.max( [
+    const separator = new HSeparatorDeprecated( _.max( [
       angleControl.width,
       wavelengthControl.width,
       horizontalControl.width,
@@ -200,7 +200,7 @@ class XrayControlPanel extends VBox {
       pathDifferenceCheckbox.width,
       waveFrontMarkersTitle.width
     ] ) );
-    const separator2 = new HSeparator( separator.width );
+    const separator2 = new HSeparatorDeprecated( separator.width );
 
     // Set pointer areas for the checkboxes, now that we have the separator dimensions.
     pathDifferenceCheckbox.mouseArea = pathDifferenceCheckbox.localBounds.dilated( 2 ).withX( separator.right );
