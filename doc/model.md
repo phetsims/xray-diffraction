@@ -27,8 +27,8 @@ The units used in this sim are:
 #### Symbols
 
 * (a, b, c) = lattice constants
-* d = atomic interplance spacing
-* θ = angle of incidence (realtive to atomic plane)
+* d = atomic interplane spacing
+* θ = angle of incidence (relative to atomic plane)
 * λ = wavelength of light (X-ray)
 * t = time
 * T = temperature
@@ -61,12 +61,12 @@ transmitted ray can also be shown.
 
 ## Detection of Bragg Condition
 
-When the additional path length differene (PLD) the lower ray travels is exactly an integer multiple of the 
-light wavelength, the Bragg condition is met. When this is detected, the simulation is notified so that 
+When the additional path length difference (PLD) the lower ray travels is exactly an integer multiple of the
+light wavelength, the Bragg condition is met. When this is detected, the simulation is notified so that
 this can be displayed to the user. When the condition is met, the diffracted rays are made bold to indicate
 that the condition for constructive interference is met and a diffraction peak will be seen at that angle.
 If present, the transmitted ray is also made slightly less bold to indicate that some intensity is diffracted
-away. 
+away.
 
 ## Vertical and Horizontal Rays
 
