@@ -150,19 +150,19 @@ class XrayControlPanel extends VBox {
     const wavefrontRadioContent = [ // value set to color iterator used by LightPathNode or 'none' for no wavefronts
       {
         value: 'none',
-        node: createLines( () => 'transparent' )
+        createNode: tandem => createLines( () => 'transparent' )
       },
       {
         value: () => 'black',
-        node: createLines( () => 'black' )
+        createNode: tandem => createLines( () => 'black' )
       },
       {
         value: i => `hsl(0, 0%, ${40 * ( ( ( i % 3 ) + 3 ) % 3 )}%)`,
-        node: createLines( i => `hsl(0, 0%, ${40 * ( ( ( i % 3 ) + 3 ) % 3 )}%)` ) // three levels, 0,40,80
+        createNode: tandem => createLines( i => `hsl(0, 0%, ${40 * ( ( ( i % 3 ) + 3 ) % 3 )}%)` ) // three levels, 0,40,80
       },
       {
         value: i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)`,
-        node: createLines( i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)` ) // 60*i gives 6 different colors ),
+        createNode: tandem => createLines( i => `hsl(${( ( 60 * i % 360 ) + 360 ) % 360}, 100%, 50%)` ) // 60*i gives 6 different colors ),
       }
     ];
 
