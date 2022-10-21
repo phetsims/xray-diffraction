@@ -14,14 +14,11 @@ import merge from '../../../../phet-core/js/merge.js';
 import StringUtils from '../../../../phetcommon/js/util/StringUtils.js';
 import NumberControl from '../../../../scenery-phet/js/NumberControl.js';
 import PhetFont from '../../../../scenery-phet/js/PhetFont.js';
-import { HBox, Node, Path, Text, VBox } from '../../../../scenery/js/imports.js';
-// modules
+import { HBox, HSeparator, Node, Path, Text, VBox } from '../../../../scenery/js/imports.js';
 import AccordionBox from '../../../../sun/js/AccordionBox.js';
 import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
 import Checkbox from '../../../../sun/js/Checkbox.js';
-import HSeparatorDeprecated from '../../../../sun/js/HSeparatorDeprecated.js';
 import Panel from '../../../../sun/js/Panel.js';
-import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
 import xrayDiffraction from '../../xrayDiffraction.js';
 import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 
@@ -41,8 +38,7 @@ const wavelengthString = XrayDiffractionStrings.wavelength;
 
 const TEXT_OPTIONS = { font: new PhetFont( { family: 'Verdana', size: 14 } ), maxWidth: 200, align: 'center', setBoundsMethod: 'accurate' };
 const SLIDER_OPTIONS = { trackSize: new Dimension2( 90, 1 ), thumbSize: new Dimension2( 13, 22 ) };
-const ELEMENT_SPACING = XrayDiffractionConstants.ELEMENT_SPACING;
-const SLIDER_SPACING = XrayDiffractionConstants.ELEMENT_SPACING * 2.6;
+const Y_SPACING = 7;
 
 class XrayControlPanel extends VBox {
 
@@ -187,20 +183,11 @@ class XrayControlPanel extends VBox {
     const waveFrontGroup = new VBox( {
       align: 'left',
       children: [ waveFrontMarkersTitle, wavefrontRadioButtonGroup ],
-      spacing: ELEMENT_SPACING
+      spacing: Y_SPACING
     } );
 
-    const separator = new HSeparatorDeprecated( _.max( [
-      angleControl.width,
-      wavelengthControl.width,
-      horizontalControl.width,
-      verticalControl.width,
-      aLatticeControl.width,
-      bLatticeControl.width,
-      pathDifferenceCheckbox.width,
-      waveFrontMarkersTitle.width
-    ] ) );
-    const separator2 = new HSeparatorDeprecated( separator.width );
+    const separator = new HSeparator();
+    const separator2 = new HSeparator();
 
     // Set pointer areas for the checkboxes, now that we have the separator dimensions.
     pathDifferenceCheckbox.mouseArea = pathDifferenceCheckbox.localBounds.dilated( 2 ).withX( separator.right );
@@ -209,23 +196,27 @@ class XrayControlPanel extends VBox {
     showTransmittedCheckbox.touchArea = showTransmittedCheckbox.mouseArea;
 
     // main control panel. Items can easily be rearranged here. Use Panel if you have to set a width inside a VBox.
-    const checkboxes = new VBox( {
-      align: 'left',
-      children: [ separator, pathDifferenceCheckbox, showTransmittedCheckbox, separator2, waveFrontGroup ],
-      spacing: ELEMENT_SPACING
-    } );
     const content = new VBox( {
-      align: 'center',
-      children: [ angleControl, wavelengthControl, bLatticeControl, checkboxes ],
-      spacing: SLIDER_SPACING
+      align: 'left',
+      children: [
+        angleControl,
+        wavelengthControl,
+        bLatticeControl,
+        separator,
+        pathDifferenceCheckbox,
+        showTransmittedCheckbox,
+        separator2,
+        waveFrontGroup
+      ],
+      spacing: Y_SPACING
     } );
     const mainContent = new Panel( content, options );
 
     // optional controls hidden in an accordian box
     const optionalParameters = new VBox( {
-      align: 'center',
+      align: 'left',
       children: [ aLatticeControl, verticalControl, horizontalControl ],
-      spacing: SLIDER_SPACING
+      spacing: Y_SPACING
     } );
 
     const accordianOptional = new AccordionBox( optionalParameters, merge( {
@@ -237,7 +228,7 @@ class XrayControlPanel extends VBox {
 
     super( {
       children: [ mainContent, timeControlNode, accordianOptional ],
-      spacing: 2 * ELEMENT_SPACING,
+      spacing: 2 * Y_SPACING,
       align: 'left'
     } );
   }
