@@ -231,13 +231,13 @@ class XrayDiffractionScreenView extends ScreenView {
           rayTextCenter = rayTextCenter.addXY( -( raySep + AMP ) * Math.sin( theta ), -( raySep + AMP ) * Math.cos( theta ) );
         }
         inPhaseText.rotation = -model.sourceAngleProperty.value;
-        inPhaseText.text = StringUtils.fillIn( inPhaseString, {
+        inPhaseText.string = StringUtils.fillIn( inPhaseString, {
           wavelengths: Utils.toFixed( model.pLDWavelengthsProperty.value, 0 )
         } );
         inPhaseText.center = rayTextCenter;
       }
       else {
-        inPhaseText.text = '';
+        inPhaseText.string = '';
       }
     } );
 
