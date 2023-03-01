@@ -63,14 +63,14 @@ class XrayControlPanel extends VBox {
     // we can convert from radians to degrees and accomodate right-to-left languages.
     const angleTitle = new Text( '?', TEXT_OPTIONS );
     // Links the current angle and converts it to degrees
-    const angleControl = new NumberControl( angleTitle.text, model.sourceAngleProperty, new Range( 0, Math.PI / 2 ),
+    const angleControl = new NumberControl( angleTitle.string, model.sourceAngleProperty, new Range( 0, Math.PI / 2 ),
       {
         delta: Math.PI / 900, // 0.2 degree resolution
         sliderOptions: SLIDER_OPTIONS,
         layoutFunction: createControlLayoutFunction( angleTitle )
       } );
     model.sourceAngleProperty.link( angle => {
-      angleTitle.text = StringUtils.fillIn( incidentAngleString, {
+      angleTitle.string = StringUtils.fillIn( incidentAngleString, {
         value: Utils.toFixed( angle * 180 / Math.PI, 1 ),
         unit: angleUnitString
       } );
@@ -85,7 +85,7 @@ class XrayControlPanel extends VBox {
         layoutFunction: createControlLayoutFunction( wavelengthTitle )
       } );
     model.sourceWavelengthProperty.link( wavelength => {
-      wavelengthTitle.text = StringUtils.fillIn( wavelengthString, {
+      wavelengthTitle.string = StringUtils.fillIn( wavelengthString, {
         value: wavelength,
         unit: lengthUnitString
       } );
@@ -100,7 +100,7 @@ class XrayControlPanel extends VBox {
         layoutFunction: createControlLayoutFunction( bLatticeTitle )
       } );
     model.lattice.cConstantProperty.link( constant => {
-      bLatticeTitle.text = StringUtils.fillIn( bdLatticeEqualsString, {
+      bLatticeTitle.string = StringUtils.fillIn( bdLatticeEqualsString, {
         value: constant,
         unit: XrayDiffractionStrings.lengthUnit
       } );
@@ -109,19 +109,19 @@ class XrayControlPanel extends VBox {
     // Control for the a lattice constant
     const aLatticeTitle = new Text( '?', TEXT_OPTIONS );
     model.lattice.aConstantProperty.link( constant => {
-      aLatticeTitle.text = StringUtils.fillIn( aLatticeEqualsString, {
+      aLatticeTitle.string = StringUtils.fillIn( aLatticeEqualsString, {
         value: constant,
         unit: XrayDiffractionStrings.lengthUnit
       } );
     } );
-    const aLatticeControl = new NumberControl( aLatticeTitle.text, model.lattice.aConstantProperty, new Range( 2, 20 ),
+    const aLatticeControl = new NumberControl( aLatticeTitle.string, model.lattice.aConstantProperty, new Range( 2, 20 ),
       {
         delta: 0.1, // 0.1 Angstrom resolution
         sliderOptions: SLIDER_OPTIONS,
         layoutFunction: createControlLayoutFunction( aLatticeTitle )
       } );
     model.lattice.aConstantProperty.link( constant => {
-      aLatticeTitle.text = StringUtils.fillIn( aLatticeEqualsString, {
+      aLatticeTitle.string = StringUtils.fillIn( aLatticeEqualsString, {
         value: constant,
         unit: XrayDiffractionStrings.lengthUnit
       } );
