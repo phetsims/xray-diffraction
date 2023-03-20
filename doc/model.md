@@ -1,9 +1,10 @@
 # X-ray Diffraction - model description
 
-This document is a high-level description of the model used in the _X-ray Diffraction_ simulation, which is based on PhET technology.
+This document is a high-level description of the model used in the _X-ray Diffraction_ simulation, which is based on
+PhET technology.
 
-The xray-diffraction model sets up a crystal lattice, defines its orientation, and calculates the parameters needed to 
-determine diffraction angles via Bragg's law or the Ewald sphere construction using reciprocol lattice vectors. More 
+The xray-diffraction model sets up a crystal lattice, defines its orientation, and calculates the parameters needed to
+determine diffraction angles via Bragg's law or the Ewald sphere construction using reciprocal lattice vectors. More
 information can be found at http://en.wikipedia.org/wiki/Bragg's_law and http://en.wikipedia.org/wiki/Ewald's_sphere
 
 ## Units, Constants, and Symbols
@@ -12,7 +13,7 @@ First, a description of the units, constants, and symbols used in this sim. Use 
 
 #### Units
 
-Since we are at the atomic scale, all distances are in Angrom (1 Å = 10<sup>-10</sup> m). All angles are in 
+Since we are at the atomic scale, all distances are in Angstrom (1 Å = 10<sup>-10</sup> m). All angles are in
 radians although they are eventually converted to degrees when output to the user.
 
 The units used in this sim are:
