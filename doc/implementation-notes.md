@@ -5,7 +5,8 @@ This document contains notes related to the implementation of X-ray diffraction.
 (source code comments).  
 
 Before reading this document, you should read:
-* [model.md](https://github.com/heldentodd/xray-diffraction/blob/master/doc/model.md), a high-level description of the simulation model
+* [model.md](https://github.com/phetsims/xray-diffraction/blob/master/doc/model.md), a high-level description of the
+  simulation model
 
 In addition to this document, you are encouraged to read: 
 * [PhET Development Overview](https://github.com/phetsims/phet-info/blob/master/doc/phet-development-overview.md)  
