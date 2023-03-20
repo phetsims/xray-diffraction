@@ -90,20 +90,14 @@ and other properties, such as the real-space and reciprocal lattice basis vector
 
 ### View
 
-[BaseScreenView](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/XrayDiffractionScreenView.js) 
+[XrayDiffractionScreenView](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/XrayDiffractionScreenView.js)
 is the base `ScreenView`. It takes care of displaying everything.
 
-[CrystalNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/CrystalNode.js) 
+[CrystalNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/CrystalNode.js)
 renders the crystal, including dimensions, at the bottom of the view.
 
 [LightPathNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/LightPathNode.js) 
 renders a light ray (sine wave, baseline, and optional wavefronts).
 
-[ProtractorNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/ProtractorNode.js) 
-renders a protractor tool. This was copied from the Bending Light PhET.
-
 [XrayControlPanel](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/XrayControlPanel.js) 
 renders a control panel that allows the user to control the various sim parameters.
-
-[XrayParameterPanel](https://github.com/phetsims/gas-properties/blob/master/js/common/view/XrayParameterPanel.js) 
-renders a display panel that shows detailed numerical information.
