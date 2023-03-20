@@ -49,9 +49,9 @@ This section enumerates the primary equations used in the sim. Use this section 
 
 ##  Crystal Lattice
 
-Atoms are arrayed on a 2D rectangular lattice. The lattice is centered at 0,0 and points are added symmetrically 
-(up and down or left and right) up to a size of 20 Å. The top center atom is placed as the first element of the 
-cystal lattice sites array as it is the point where the first light ray hits. 
+Atoms are arrayed on a 2D rectangular lattice. The lattice is centered at 0,0 and points are added symmetrically
+(up and down or left and right) up to a size of 20 Å. The top center atom is placed as the first element of the
+crystal lattice sites array as it is the point where the first light ray hits.
 
 ## Light Rays (X-Rays)
 
