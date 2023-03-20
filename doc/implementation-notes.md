@@ -80,24 +80,24 @@ This section describes base classes that are common to all screens.  You'll find
 
 ### Model
 
-[XrayDiffractionModel](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/model/XrayDiffractionModel.js) 
-is the model base class. It calculates the path length difference (PLD) and reciprocal lattice vectors needed to 
-calculate the diffraction angles via Bragg's law or the Ewald sphere. 
+[XrayDiffractionModel](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/model/XrayDiffractionModel.js)
+is the model base class. It calculates the path length difference (PLD) and reciprocal lattice vectors needed to
+calculate the diffraction angles via Bragg's law or the Ewald sphere.
 
-[Lattice](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/model/Lattice.js) 
-defines the lattice that is acting as an X-ray diffraction grating. The atomic sites are in _lattice.sites_ 
+[Lattice](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/model/Lattice.js)
+defines the lattice that is acting as an X-ray diffraction grating. The atomic sites are in _lattice.sites_
 and other properties, such as the real-space and reciprocal lattice basis vectors are also stored here.
 
 ### View
 
-[XrayDiffractionScreenView](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/XrayDiffractionScreenView.js)
+[XrayDiffractionScreenView](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/XrayDiffractionScreenView.js)
 is the base `ScreenView`. It takes care of displaying everything.
 
-[CrystalNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/CrystalNode.js)
+[CrystalNode](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/CrystalNode.js)
 renders the crystal, including dimensions, at the bottom of the view.
 
-[LightPathNode](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/LightPathNode.js) 
+[LightPathNode](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/LightPathNode.js)
 renders a light ray (sine wave, baseline, and optional wavefronts).
 
-[XrayControlPanel](https://github.com/phetsims/phet-info/blob/master/js/xray-diffraction/view/XrayControlPanel.js) 
+[XrayControlPanel](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/XrayControlPanel.js)
 renders a control panel that allows the user to control the various sim parameters.
