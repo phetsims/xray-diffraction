@@ -5,52 +5,52 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import LinkableProperty from '../../axon/js/LinkableProperty.js';
+import type LocalizedStringProperty from '../../chipper/js/LocalizedStringProperty.js';
 import xrayDiffraction from './xrayDiffraction.js';
 
 type StringsType = {
   'xray-diffraction': {
     'title': string;
-    'titleStringProperty': LinkableProperty<string>;
+    'titleStringProperty': LocalizedStringProperty;
   };
   'angleUnit': string;
-  'angleUnitStringProperty': LinkableProperty<string>;
+  'angleUnitStringProperty': LocalizedStringProperty;
   'aLatticeConstant': string;
-  'aLatticeConstantStringProperty': LinkableProperty<string>;
+  'aLatticeConstantStringProperty': LocalizedStringProperty;
   'bLatticeConstant': string;
-  'bLatticeConstantStringProperty': LinkableProperty<string>;
+  'bLatticeConstantStringProperty': LocalizedStringProperty;
   'aLatticeEquals': string;
-  'aLatticeEqualsStringProperty': LinkableProperty<string>;
+  'aLatticeEqualsStringProperty': LocalizedStringProperty;
   'bdLatticeEquals': string;
-  'bdLatticeEqualsStringProperty': LinkableProperty<string>;
+  'bdLatticeEqualsStringProperty': LocalizedStringProperty;
   'braggEquation': string;
-  'braggEquationStringProperty': LinkableProperty<string>;
+  'braggEquationStringProperty': LocalizedStringProperty;
   'dSinTheta': string;
-  'dSinThetaStringProperty': LinkableProperty<string>;
+  'dSinThetaStringProperty': LocalizedStringProperty;
   'horizontalRays': string;
-  'horizontalRaysStringProperty': LinkableProperty<string>;
+  'horizontalRaysStringProperty': LocalizedStringProperty;
   'incidentAngle': string;
-  'incidentAngleStringProperty': LinkableProperty<string>;
+  'incidentAngleStringProperty': LocalizedStringProperty;
   'inPhase': string;
-  'inPhaseStringProperty': LinkableProperty<string>;
+  'inPhaseStringProperty': LocalizedStringProperty;
   'interplaneDistance': string;
-  'interplaneDistanceStringProperty': LinkableProperty<string>;
+  'interplaneDistanceStringProperty': LocalizedStringProperty;
   'lengthUnit': string;
-  'lengthUnitStringProperty': LinkableProperty<string>;
+  'lengthUnitStringProperty': LocalizedStringProperty;
   'moreParameters': string;
-  'moreParametersStringProperty': LinkableProperty<string>;
+  'moreParametersStringProperty': LocalizedStringProperty;
   'pathDifference': string;
-  'pathDifferenceStringProperty': LinkableProperty<string>;
+  'pathDifferenceStringProperty': LocalizedStringProperty;
   'pLD': string;
-  'pLDStringProperty': LinkableProperty<string>;
+  'pLDStringProperty': LocalizedStringProperty;
   'showTransmitted': string;
-  'showTransmittedStringProperty': LinkableProperty<string>;
+  'showTransmittedStringProperty': LocalizedStringProperty;
   'verticalRays': string;
-  'verticalRaysStringProperty': LinkableProperty<string>;
+  'verticalRaysStringProperty': LocalizedStringProperty;
   'wavelength': string;
-  'wavelengthStringProperty': LinkableProperty<string>;
+  'wavelengthStringProperty': LocalizedStringProperty;
   'waveFrontMarkers': string;
-  'waveFrontMarkersStringProperty': LinkableProperty<string>;
+  'waveFrontMarkersStringProperty': LocalizedStringProperty;
 };
 
 const XrayDiffractionStrings = getStringModule( 'XRAY_DIFFRACTION' ) as StringsType;
