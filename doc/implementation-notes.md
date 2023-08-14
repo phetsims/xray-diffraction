@@ -5,12 +5,12 @@ This document contains notes related to the implementation of X-ray diffraction.
 (source code comments).  
 
 Before reading this document, you should read:
-* [model.md](https://github.com/phetsims/xray-diffraction/blob/master/doc/model.md), a high-level description of the
+* [model.md](https://github.com/phetsims/xray-diffraction/blob/main/doc/model.md), a high-level description of the
   simulation model
 
 In addition to this document, you are encouraged to read: 
-* [PhET Development Overview](https://github.com/phetsims/phet-info/blob/master/doc/phet-development-overview.md)  
-* [PhET Software Design Patterns](https://github.com/phetsims/phet-info/blob/master/doc/phet-software-design-patterns.md)
+* [PhET Development Overview](https://github.com/phetsims/phet-info/blob/main/doc/phet-development-overview.md)  
+* [PhET Software Design Patterns](https://github.com/phetsims/phet-info/blob/main/doc/phet-software-design-patterns.md)
 
 ## Overview
 
@@ -80,24 +80,24 @@ This section describes base classes that are common to all screens.  You'll find
 
 ### Model
 
-[XrayDiffractionModel](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/model/XrayDiffractionModel.js)
+[XrayDiffractionModel](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/model/XrayDiffractionModel.js)
 is the model base class. It calculates the path length difference (PLD) and reciprocal lattice vectors needed to
 calculate the diffraction angles via Bragg's law or the Ewald sphere.
 
-[Lattice](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/model/Lattice.js)
+[Lattice](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/model/Lattice.js)
 defines the lattice that is acting as an X-ray diffraction grating. The atomic sites are in _lattice.sites_
 and other properties, such as the real-space and reciprocal lattice basis vectors are also stored here.
 
 ### View
 
-[XrayDiffractionScreenView](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/XrayDiffractionScreenView.js)
+[XrayDiffractionScreenView](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/view/XrayDiffractionScreenView.js)
 is the base `ScreenView`. It takes care of displaying everything.
 
-[CrystalNode](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/CrystalNode.js)
+[CrystalNode](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/view/CrystalNode.js)
 renders the crystal, including dimensions, at the bottom of the view.
 
-[LightPathNode](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/LightPathNode.js)
+[LightPathNode](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/view/LightPathNode.js)
 renders a light ray (sine wave, baseline, and optional wavefronts).
 
-[XrayControlPanel](https://github.com/phetsims/xray-diffraction/blob/master/js/xray-diffraction/view/XrayControlPanel.js)
+[XrayControlPanel](https://github.com/phetsims/xray-diffraction/blob/main/js/xray-diffraction/view/XrayControlPanel.js)
 renders a control panel that allows the user to control the various sim parameters.
