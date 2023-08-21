@@ -17,13 +17,14 @@ Since we are at the atomic scale, all distances are in Angstrom (1 Å = 10<sup>-
 radians although they are eventually converted to degrees when output to the user.
 
 The units used in this sim are:
+
 * angle: radians
 * distance: Å
 * time: as (= 10<sup>-18</sup> s - This slows down the light waves enough to allow for limitations in human perception)
 
 #### Constants
 
-* c = speed of light = 3 x 10<sup>8</sup> m/s (= 3 Å/As) 
+* c = speed of light = 3 x 10<sup>8</sup> m/s (= 3 Å/As)
 
 #### Symbols
 
@@ -44,10 +45,11 @@ This section enumerates the primary equations used in the sim. Use this section 
 * Bragg's Law: 2d<i>sin</i>(θ) = nλ
 * photon wavenumber: k = 2π/λ
 * Reciprocal Lattice Constants: (h,k,l) = (2π/a, 2π/b, 2π/c) (for an orthorhombic lattice)
-* Reciprocal Lattice Vectors: <b>G</b> = (n<sub>1</sub>·h,n<sub>2</sub>·k,n<sub>3</sub>·l), n<sub>1</sub>, n<sub>2</sub>, and n<sub>3</sub> are integers
+* Reciprocal Lattice Vectors: <b>G</b> = (n<sub>1</sub>·h,n<sub>2</sub>·k,n<sub>3</sub>·l), n<sub>1</sub>, n<sub>
+  2</sub>, and n<sub>3</sub> are integers
 * General Diffraction Condition: <b>K<sub>f</sub></b> - <b>K<sub>i</sub></b> = <b>G</b>
 
-##  Crystal Lattice
+## Crystal Lattice
 
 Atoms are arrayed on a 2D rectangular lattice. The lattice is centered at 0,0 and points are added symmetrically
 (up and down or left and right) up to a size of 20 Å. The top center atom is placed as the first element of the
@@ -55,9 +57,9 @@ crystal lattice sites array as it is the point where the first light ray hits.
 
 ## Light Rays (X-Rays)
 
-The first light ray enters at the proper angle and reflects specularly off the top center atom 
-(transmitted rays, etc. are not currently shown). Rays bouncing off lower atoms travel a longer distance 
-and thus can end up in-phase or out of phase depending on the lattice constant and incident angle. The 
+The first light ray enters at the proper angle and reflects specularly off the top center atom
+(transmitted rays, etc. are not currently shown). Rays bouncing off lower atoms travel a longer distance
+and thus can end up in-phase or out of phase depending on the lattice constant and incident angle. The
 transmitted ray can also be shown.
 
 ## Detection of Bragg Condition
@@ -71,7 +73,7 @@ away.
 
 ## Vertical and Horizontal Rays
 
-The simulation allows the student to display extra vertical and horizontal waves. This allows the student to see 
-that the horizontal atoms do not determine the Bragg angle, since rays reflected from them are always-in phase. 
-Likewise, the student can see that extra vertical layers will be in-phase if the first two are in-phase and 
+The simulation allows the student to display extra vertical and horizontal waves. This allows the student to see
+that the horizontal atoms do not determine the Bragg angle, since rays reflected from them are always-in phase.
+Likewise, the student can see that extra vertical layers will be in-phase if the first two are in-phase and
 will cause destructive interference otherwise.
