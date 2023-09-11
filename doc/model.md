@@ -13,8 +13,8 @@ First, a description of the units, constants, and symbols used in this sim. Use 
 
 #### Units
 
-Since we are at the atomic scale, all distances are in Angstrom (1 Å = 10<sup>-10</sup> m). All angles are in
-radians although they are eventually converted to degrees when output to the user.
+Since we are at the atomic scale, all distances are in Angstrom (1 Å = 10<sup>-10</sup> m). All angles are in radians
+although they are eventually converted to degrees when output to the user.
 
 The units used in this sim are:
 
@@ -52,28 +52,27 @@ This section enumerates the primary equations used in the sim. Use this section 
 ## Crystal Lattice
 
 Atoms are arrayed on a 2D rectangular lattice. The lattice is centered at 0,0 and points are added symmetrically
-(up and down or left and right) up to a size of 20 Å. The top center atom is placed as the first element of the
-crystal lattice sites array as it is the point where the first light ray hits.
+(up and down or left and right) up to a size of 20 Å. The top center atom is placed as the first element of the crystal
+lattice sites array as it is the point where the first light ray hits.
 
 ## Light Rays (X-Rays)
 
 The first light ray enters at the proper angle and reflects specularly off the top center atom
-(transmitted rays, etc. are not currently shown). Rays bouncing off lower atoms travel a longer distance
-and thus can end up in-phase or out of phase depending on the lattice constant and incident angle. The
-transmitted ray can also be shown.
+(transmitted rays, etc. are not currently shown). Rays bouncing off lower atoms travel a longer distance and thus can
+end up in-phase or out of phase depending on the lattice constant and incident angle. The transmitted ray can also be
+shown.
 
 ## Detection of Bragg Condition
 
-When the additional path length difference (PLD) the lower ray travels is exactly an integer multiple of the
-light wavelength, the Bragg condition is met. When this is detected, the simulation is notified so that
-this can be displayed to the user. When the condition is met, the diffracted rays are made bold to indicate
-that the condition for constructive interference is met and a diffraction peak will be seen at that angle.
-If present, the transmitted ray is also made slightly less bold to indicate that some intensity is diffracted
-away.
+When the additional path length difference (PLD) the lower ray travels is exactly an integer multiple of the light
+wavelength, the Bragg condition is met. When this is detected, the simulation is notified so that this can be displayed
+to the user. When the condition is met, the diffracted rays are made bold to indicate that the condition for
+constructive interference is met and a diffraction peak will be seen at that angle. If present, the transmitted ray is
+also made slightly less bold to indicate that some intensity is diffracted away.
 
 ## Vertical and Horizontal Rays
 
-The simulation allows the student to display extra vertical and horizontal waves. This allows the student to see
-that the horizontal atoms do not determine the Bragg angle, since rays reflected from them are always-in phase.
-Likewise, the student can see that extra vertical layers will be in-phase if the first two are in-phase and
-will cause destructive interference otherwise.
+The simulation allows the student to display extra vertical and horizontal waves. This allows the student to see that
+the horizontal atoms do not determine the Bragg angle, since rays reflected from them are always-in phase. Likewise, the
+student can see that extra vertical layers will be in-phase if the first two are in-phase and will cause destructive
+interference otherwise.
