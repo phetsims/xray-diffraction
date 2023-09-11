@@ -20,8 +20,7 @@ This repository contains the code for one simulation, but eventually three are p
 Diffraction, and Powder Diffraction.
 
 Source code directory structure will be as follows (in the future):
-common - contains code that is used by >1 screen
-bragg-law - contains code used by the "bragg-law" screen
+common - contains code that is used by >1 screen bragg-law - contains code used by the "bragg-law" screen
 single-crystal - contains code used by "single-crystal" screen (in the near future)
 powder - contains code used by "powder" screen (in the near future)
 
@@ -32,10 +31,9 @@ the center of the crystal. In model positive x is to the right, positive y is up
 (0,0) and positive x is to the right, positive y is down.
 
 The simulation is mainly for Bragg angles, which are when the path length difference (PLD) is equal to an integral
-number
-of wavelengths, and thus we have constructive interference. We can also express this as Bragg's Law, which is
-2 d sin(θ) = n λ (where d is the distance between atomic planes, θ is the angle of incidence, λ is the wavelength, and
-n is any integer).
+number of wavelengths, and thus we have constructive interference. We can also express this as Bragg's Law, which is 2 d
+sin(θ) = n λ (where d is the distance between atomic planes, θ is the angle of incidence, λ is the wavelength, and n is
+any integer).
 
 Properties are named with the suffix 'Property', e.g. positionProperty.
 
@@ -52,8 +50,8 @@ Here's the (relatively short) list of terms that might be unclear:
 * _model.lattice_ - defines the lattice that is acting as an X-ray diffraction grating. The atomic sites are in
   _lattice.sites_
   and other properties, such as the real-space and reciprocal lattice basis vectors are also stored here.
-* _model.pLDProperty_ - this property stores the path length difference (PLD) which can be compared to the wavelength
-  to see if we have met the Bragg condition.
+* _model.pLDProperty_ - this property stores the path length difference (PLD) which can be compared to the wavelength to
+  see if we have met the Bragg condition.
 
 ## General Considerations
 
@@ -61,24 +59,24 @@ This section describes how this simulation addresses implementation consideratio
 PhET simulations.
 
 **Coordinate Transforms**: The model coordinate frame is in Angstrom (Å), with +x right, +y down. The standard
-(scenery) view coordinate frame has +x right, +y down. The transform is therefore a simple scale factor currently set
-to 8 just to make things look good.
+(scenery) view coordinate frame has +x right, +y down. The transform is therefore a simple scale factor currently set to
+8 just to make things look good.
 
-**Time Transforms**: light is very fast. To slow things down enough to see a light wave waving (in the distance of a
-few Angstrom) we need to greatly slow down time (by a factor of 10<sup>18</sup>). Alternatively, this can be thought of
-as letting the speed of light to be 3 Å/s rather than 3x10<sup>18</sup> m/s.
+**Time Transforms**: light is very fast. To slow things down enough to see a light wave waving (in the distance of a few
+Angstrom) we need to greatly slow down time (by a factor of 10<sup>18</sup>). Alternatively, this can be thought of as
+letting the speed of light to be 3 Å/s rather than 3x10<sup>18</sup> m/s.
 
 **Memory Management**:  Light rays are drawn as a node that is removed at each timestep and not referenced outside of
-the XrayDiffractionScreenView. All other object instances (model and view) persist for the
-lifetime of the sim. There is no need to call `unlink`, `removeListener`, `dispose`, etc.
+the XrayDiffractionScreenView. All other object instances (model and view) persist for the lifetime of the sim. There is
+no need to call `unlink`, `removeListener`, `dispose`, etc.
 
 **Query Parameters**: Only the standard PhET Query Parameters are implemented at this time.
 
 **Color Profiles**: No special color profiles are implemented at this time.
 
-**Assertions**: The implementation makes use of `assert` to verify pre/post assumptions and perform type checking.
-This sim performs type-checking for most function arguments via `assert`. If you are making modifications to this sim,
-do so with assertions enabled via the `ea` query parameter.
+**Assertions**: The implementation makes use of `assert` to verify pre/post assumptions and perform type checking. This
+sim performs type-checking for most function arguments via `assert`. If you are making modifications to this sim, do so
+with assertions enabled via the `ea` query parameter.
 
 ## Detailed code descriptions
 
