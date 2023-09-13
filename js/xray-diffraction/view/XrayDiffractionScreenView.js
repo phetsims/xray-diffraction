@@ -161,7 +161,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     const measuringTapeIcon = MeasuringTapeNode.createIcon( { scale: 0.65 } );
 
-    //TODO this should be passed to new MeasuringTapeNode as visibleProperty option value
+    //TODO this should be passed to new MeasuringTapeNode as visibleProperty option value https://github.com/phetsims/tasks/issues/1129
     const isMeasuringTapeInPlayAreaProperty = new BooleanProperty( false );
     measuringTapeNode.visible = false;
 
