@@ -141,13 +141,17 @@ class XrayDiffractionScreenView extends ScreenView {
       showProtractorProperty.value = true;
     } );
 
+    const isMeasuringTapeInPlayAreaProperty = new BooleanProperty( false );
+
     // add tape measure
     const measuringTapeProperty = new Property( { name: 'Å', multiplier: 1 / SCALE_FACTOR } );
     const measuringTapeNode = new MeasuringTapeNode( measuringTapeProperty, {
+
       // translucent white background, same value as in Projectile Motion, see https://github.com/phetsims/projectile-motion/issues/156
       textBackgroundColor: 'rgba(255,255,255,0.6)',
       textColor: 'black',
       tipPositionProperty: new Vector2Property( new Vector2( 5 * SCALE_FACTOR, 0 ) ), // 5 Angstrom initial length
+      visibleProperty: isMeasuringTapeInPlayAreaProperty,
 
       // Drop in toolbox
       baseDragEnded: () => {
@@ -160,10 +164,6 @@ class XrayDiffractionScreenView extends ScreenView {
     } );
 
     const measuringTapeIcon = MeasuringTapeNode.createIcon( { scale: 0.65 } );
-
-    //TODO this should be passed to new MeasuringTapeNode as visibleProperty option value https://github.com/phetsims/tasks/issues/1129
-    const isMeasuringTapeInPlayAreaProperty = new BooleanProperty( false );
-    measuringTapeNode.visible = false;
 
     initializeIcon( measuringTapeIcon, isMeasuringTapeInPlayAreaProperty, event => {
       // When clicking on the measuring tape icon, base point at cursor
