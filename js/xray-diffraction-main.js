@@ -16,7 +16,7 @@ const xrayDiffractionTitleStringProperty = XrayDiffractionStrings[ 'xray-diffrac
 
 const simOptions = {
   credits: {
-    //TODO fill in credits, all of these fields are optional, see joist.CreditsNode https://github.com/phetsims/tasks/issues/1129
+    //TODO fill in credits, https://github.com/phetsims/xray-diffraction/issues/5
     leadDesign: '',
     softwareDevelopment: '',
     team: '',
