@@ -18,7 +18,6 @@ class XrayDiffractionScreen extends Screen {
   constructor( tandem ) {
 
     const options = {
-      //TODO if you include homeScreenIcon or navigationBarIcon, use JOIST/ScreenIcon https://github.com/phetsims/tasks/issues/1129
       backgroundColorProperty: new Property( 'white' ),
       tandem: tandem
     };
