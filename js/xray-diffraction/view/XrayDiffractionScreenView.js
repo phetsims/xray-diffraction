@@ -145,12 +145,13 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // add tape measure
     const measuringTapeProperty = new Property( { name: 'Å', multiplier: 1 / SCALE_FACTOR } );
+    const measuringTapeTipPositionProperty = new Vector2Property( new Vector2( 5 * SCALE_FACTOR, 0 ) ); // 5 Angstrom initial length
     const measuringTapeNode = new MeasuringTapeNode( measuringTapeProperty, {
 
       // translucent white background, same value as in Projectile Motion, see https://github.com/phetsims/projectile-motion/issues/156
       textBackgroundColor: 'rgba(255,255,255,0.6)',
       textColor: 'black',
-      tipPositionProperty: new Vector2Property( new Vector2( 5 * SCALE_FACTOR, 0 ) ), // 5 Angstrom initial length
+      tipPositionProperty: measuringTapeTipPositionProperty,
       visibleProperty: isMeasuringTapeInPlayAreaProperty,
 
       // Drop in toolbox
@@ -158,6 +159,7 @@ class XrayDiffractionScreenView extends ScreenView {
         if ( measuringTapeNode.getGlobalBounds().intersectsBounds( this.toolbox.getGlobalBounds() ) ) {
           isMeasuringTapeInPlayAreaProperty.value = false;
           measuringTapeNode.visible = false;
+          measuringTapeTipPositionProperty.reset();
           measuringTapeNode.reset();
         }
       }
@@ -297,7 +299,7 @@ class XrayDiffractionScreenView extends ScreenView {
         protractorNode.reset();
         isMeasuringTapeInPlayAreaProperty.value = false;
         measuringTapeNode.visible = false;
-        measuringTapeNode.reset();
+        measuringTapeTipPositionProperty.reset();
       },
       right: this.layoutBounds.maxX - XrayDiffractionConstants.SCREEN_VIEW_X_MARGIN,
       bottom: this.layoutBounds.maxY - XrayDiffractionConstants.SCREEN_VIEW_Y_MARGIN,
