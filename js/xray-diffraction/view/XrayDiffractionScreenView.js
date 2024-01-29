@@ -144,9 +144,9 @@ class XrayDiffractionScreenView extends ScreenView {
     const isMeasuringTapeInPlayAreaProperty = new BooleanProperty( false );
 
     // add tape measure
-    const measuringTapeProperty = new Property( { name: 'Å', multiplier: 1 / SCALE_FACTOR } );
+    const measuringTapeUnitsProperty = new Property( { name: 'Å', multiplier: 1 / SCALE_FACTOR } );
     const measuringTapeTipPositionProperty = new Vector2Property( new Vector2( 5 * SCALE_FACTOR, 0 ) ); // 5 Angstrom initial length
-    const measuringTapeNode = new MeasuringTapeNode( measuringTapeProperty, {
+    const measuringTapeNode = new MeasuringTapeNode( measuringTapeUnitsProperty, {
 
       // translucent white background, same value as in Projectile Motion, see https://github.com/phetsims/projectile-motion/issues/156
       textBackgroundColor: 'rgba(255,255,255,0.6)',
