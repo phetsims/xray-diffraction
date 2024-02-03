@@ -66,16 +66,13 @@ class XrayDiffractionScreenView extends ScreenView {
     this.crystalNode = new CrystalNode( model.lattice.sites, model.lattice.latticeConstantsProperty.value, CRYSTAL_NODE_OPTIONS );
     this.crystalNodeContainer = new Node();
     this.crystalNodeContainer.addChild( this.crystalNode );
-    this.addChild( this.crystalNodeContainer );
 
     // @private - used to draw the current frame of the light waves. Updated at each timestep when animating.
     this.lightPathsNode = new Node();
-    this.addChild( this.lightPathsNode );
 
     // @private node for displaying PLD region
     this.pLDNode = new Node();
     this.pLDChanged = true;
-    this.addChild( this.pLDNode );
 
     // Initial drawing of light onto the screen.
     this.drawLight( model, this.crystalNode );
@@ -192,13 +189,9 @@ class XrayDiffractionScreenView extends ScreenView {
       left: this.layoutBounds.minX + XrayDiffractionConstants.SCREEN_VIEW_X_MARGIN,
       bottom: this.layoutBounds.maxY - XrayDiffractionConstants.SCREEN_VIEW_Y_MARGIN
     } );
-    this.addChild( this.toolbox );
-    this.addChild( protractorNode );
-    this.addChild( measuringTapeNode );
 
     // max width set to 260 which is less than the exit ray length
     const inPhaseText = new RichText( '', { maxWidth: 260 } );
-    this.addChild( inPhaseText );
 
     // Note when we need to redraw PLD region
     // listener created once and needed for life of simulation. No need to dispose.
@@ -276,7 +269,6 @@ class XrayDiffractionScreenView extends ScreenView {
     // Layout for controls done manually at the top right
     this.controlPanel.top = XrayDiffractionConstants.SCREEN_VIEW_Y_MARGIN;
     this.controlPanel.right = this.layoutBounds.maxX - XrayDiffractionConstants.SCREEN_VIEW_X_MARGIN;
-    this.addChild( this.controlPanel );
 
     // update view on model step
     model.addStepListener( () => {
@@ -305,7 +297,21 @@ class XrayDiffractionScreenView extends ScreenView {
       bottom: this.layoutBounds.maxY - XrayDiffractionConstants.SCREEN_VIEW_Y_MARGIN,
       tandem: tandem.createTandem( 'resetAllButton' )
     } );
-    this.addChild( resetAllButton );
+
+    const screenViewRootNode = new Node( {
+      children: [
+        this.crystalNodeContainer,
+        this.lightPathsNode,
+        this.pLDNode,
+        this.toolbox,
+        protractorNode,
+        measuringTapeNode,
+        inPhaseText,
+        this.controlPanel,
+        resetAllButton
+      ]
+    } );
+    this.addChild( screenViewRootNode );
   }
 
   /**
