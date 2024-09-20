@@ -28,7 +28,7 @@
         ],
         "parserOptions": {
           "project": [
-            "../xray-diffraction/tsconfig.json"
+            "../chipper/tsconfig/eslint-all/tsconfig.json"
           ]
         }
       }
