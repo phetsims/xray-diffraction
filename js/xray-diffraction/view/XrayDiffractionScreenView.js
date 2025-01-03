@@ -79,7 +79,7 @@ class XrayDiffractionScreenView extends ScreenView {
 
     // @protected Time Controls - subclass is responsible for play/pause of light animation
     this.timeControlNode = new TimeControlNode( model.animateProperty, {
-      buttonGroupXSpacing: 25,
+      flowBoxSpacing: 25,
       playPauseStepButtonOptions: {
         stepForwardButtonOptions: {
           // when the Step button is pressed
