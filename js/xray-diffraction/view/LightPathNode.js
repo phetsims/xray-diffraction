@@ -1,4 +1,4 @@
-// Copyright 2020-2022, University of Colorado Boulder
+// Copyright 2020-2025, University of Colorado Boulder
 
 /**
  * Draws a sinusoidal wave with a dashed line to represent a light path. Can also display wavefronts in multicolor.
