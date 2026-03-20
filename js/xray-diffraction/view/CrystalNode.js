@@ -14,7 +14,6 @@ import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
 import RichText from '../../../../scenery/js/nodes/RichText.js';
 import RadialGradient from '../../../../scenery/js/util/RadialGradient.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
-import xrayDiffraction from '../../xrayDiffraction.js';
 import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 
 // strings
@@ -98,5 +97,4 @@ class CrystalNode extends Node {
   }
 }
 
-xrayDiffraction.register( 'CrystalNode', CrystalNode );
 export default CrystalNode;

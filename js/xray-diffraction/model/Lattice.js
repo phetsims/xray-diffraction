@@ -14,7 +14,6 @@ import DerivedProperty from '../../../../axon/js/DerivedProperty.js';
 import NumberProperty from '../../../../axon/js/NumberProperty.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
 import Vector3 from '../../../../dot/js/Vector3.js';
-import xrayDiffraction from '../../xrayDiffraction.js';
 
 //----------------------------------------------------------------------------------------
 // constants
@@ -127,5 +126,4 @@ class Lattice {
   }
 }
 
-xrayDiffraction.register( 'Lattice', Lattice );
 export default Lattice;

@@ -24,7 +24,6 @@ import AccordionBox from '../../../../sun/js/AccordionBox.js';
 import RectangularRadioButtonGroup from '../../../../sun/js/buttons/RectangularRadioButtonGroup.js';
 import Checkbox from '../../../../sun/js/Checkbox.js';
 import Panel from '../../../../sun/js/Panel.js';
-import xrayDiffraction from '../../xrayDiffraction.js';
 import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 
 // strings
@@ -288,5 +287,4 @@ function createLines( interationFunction ) {
   return linesNode;
 }
 
-xrayDiffraction.register( 'XrayControlPanel', XrayControlPanel );
 export default XrayControlPanel;

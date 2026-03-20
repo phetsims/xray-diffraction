@@ -28,7 +28,6 @@ import RichText from '../../../../scenery/js/nodes/RichText.js';
 import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import XrayDiffractionConstants from '../../common/XrayDiffractionConstants.js';
-import xrayDiffraction from '../../xrayDiffraction.js';
 import XrayDiffractionStrings from '../../XrayDiffractionStrings.js';
 import XrayDiffractionModel from '../model/XrayDiffractionModel.js';
 import CrystalNode from './CrystalNode.js';
@@ -524,5 +523,4 @@ const initializeIcon = ( node, inPlayAreaProperty, forwardingListener ) => {
   node.addInputListener( DragListener.createForwardingListener( forwardingListener ) );
 };
 
-xrayDiffraction.register( 'XrayDiffractionScreenView', XrayDiffractionScreenView );
 export default XrayDiffractionScreenView;

@@ -6,8 +6,6 @@
  * @author Todd Holden (https://tholden79.wixsite.com/mysite2)
  */
 
-import xrayDiffraction from '../xrayDiffraction.js';
-
 const XrayDiffractionConstants = {
 
   SCREEN_VIEW_X_MARGIN: 15,
@@ -17,5 +15,4 @@ const XrayDiffractionConstants = {
 
 };
 
-xrayDiffraction.register( 'XrayDiffractionConstants', XrayDiffractionConstants );
 export default XrayDiffractionConstants;

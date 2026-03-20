@@ -12,7 +12,6 @@ import TinyEmitter from '../../../../axon/js/TinyEmitter.js';
 import Utils from '../../../../dot/js/Utils.js';
 import Vector3 from '../../../../dot/js/Vector3.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import xrayDiffraction from '../../xrayDiffraction.js';
 import Lattice from './Lattice.js';
 
 /**
@@ -106,5 +105,4 @@ class XrayDiffractionModel {
   }
 }
 
-xrayDiffraction.register( 'XrayDiffractionModel', XrayDiffractionModel );
 export default XrayDiffractionModel;
