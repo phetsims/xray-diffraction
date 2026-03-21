@@ -58,4 +58,6 @@ type StringsType = {
 
 const XrayDiffractionStrings = getStringModule( 'XRAY_DIFFRACTION' ) as StringsType;
 
+xrayDiffraction.register( 'XrayDiffractionStrings', XrayDiffractionStrings );
+
 export default XrayDiffractionStrings;
